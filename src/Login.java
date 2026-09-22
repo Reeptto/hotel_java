@@ -306,8 +306,8 @@ public class Login extends JFrame {
 
             if (rs.next()) {
                 JOptionPane.showMessageDialog(this, "Login Berhasil! Selamat Datang, " + username);
-                // new DashboardHotel(username).setVisible(true);
-                // dispose();
+                new DashboardHotel (username).setVisible(true);
+                dispose();
             } else {
                 JOptionPane.showMessageDialog(this, "Username atau Password salah!", "Gagal Login", JOptionPane.ERROR_MESSAGE);
                 txtLoginPass.setText("");
