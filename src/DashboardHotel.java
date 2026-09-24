@@ -74,7 +74,7 @@ public class DashboardHotel extends JFrame {
         panelBrand.setOpaque(false);
         panelBrand.setBorder(new EmptyBorder(25, 20, 20, 20));
 
-        JLabel lblBrandTitle = new JLabel("SWISS-BELHOTEL");
+        JLabel lblBrandTitle = new JLabel("SWISSBELLIN HOTEL");
         lblBrandTitle.setFont(new Font("Segoe UI", Font.BOLD, 18));
         lblBrandTitle.setForeground(new Color(245, 158, 11)); // Emas Amber
 

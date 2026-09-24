@@ -12,18 +12,15 @@ public class Login extends JFrame {
     private CardLayout cardLayout;
     private JPanel formContainer;
 
-    // Field Login
     private JTextField txtLoginUser;
     private JPasswordField txtLoginPass;
 
-    // Field Register
     private JTextField txtRegUser;
     private JPasswordField txtRegPass, txtRegConfirm;
 
-    // Warna Tema Elegan
-    private final Color COLOR_BG_SIDE = new Color(15, 23, 42);      // Deep Midnight Slate
-    private final Color COLOR_GOLD = new Color(217, 119, 6);         // Amber Gold
-    private final Color COLOR_PRIMARY = new Color(37, 99, 235);      // Royal Blue
+    private final Color COLOR_BG_SIDE = new Color(15, 23, 42); // Deep Midnight Slate
+    private final Color COLOR_GOLD = new Color(217, 119, 6); // Amber Gold
+    private final Color COLOR_PRIMARY = new Color(37, 99, 235); // Royal Blue
     private final Color COLOR_TEXT_MUTED = new Color(100, 116, 139);
 
     public Login() {
@@ -89,7 +86,7 @@ public class Login extends JFrame {
         lblStar.setForeground(COLOR_GOLD);
         lblStar.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        JLabel lblBrand = new JLabel("<html>SWISS-BELHOTEL<br>KARAWANG</html>");
+        JLabel lblBrand = new JLabel("<html>SWISSBELLIN HOTEL<br>KARAWANG</html>");
         lblBrand.setFont(new Font("Segoe UI", Font.BOLD, 28));
         lblBrand.setForeground(Color.WHITE);
         lblBrand.setAlignmentX(Component.LEFT_ALIGNMENT);
