@@ -74,7 +74,7 @@ public class DashboardHotel extends JFrame {
         panelBrand.setOpaque(false);
         panelBrand.setBorder(new EmptyBorder(25, 20, 20, 20));
 
-        JLabel lblBrandTitle = new JLabel("SWISS-BELHOTEL");
+        JLabel lblBrandTitle = new JLabel("SWISSBELLIN HOTEL");
         lblBrandTitle.setFont(new Font("Segoe UI", Font.BOLD, 18));
         lblBrandTitle.setForeground(new Color(245, 158, 11)); // Emas Amber
 
@@ -371,15 +371,19 @@ public class DashboardHotel extends JFrame {
         return btn;
     }
 
-   private void bukaModul(String namaModul) {
-    if (namaModul.equals("CRUD Jenis Kamar")) {
-        new FormJenisKamar().setVisible(true);
-    } else if (namaModul.equals("CRUD Kamar")) {
-        new FormKamar().setVisible(true);
-    } else {
-        JOptionPane.showMessageDialog(this, "Membuka modul: " + namaModul);
+    private void bukaModul(String namaModul) {
+        if (namaModul.equals("CRUD Jenis Kamar")) {
+            new FormJenisKamar().setVisible(true);
+        } else if (namaModul.equals("CRUD Kamar")) {
+            new FormKamar().setVisible(true);
+        } else if (namaModul.equals("CRUD Tamu")) {
+            new FormTamu().setVisible(true);
+        } else if (namaModul.equals("CRUD Waiters")) {
+            new FormWaiters().setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Membuka modul: " + namaModul);
+        }
     }
-}
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new DashboardHotel("Waode", null).setVisible(true));
