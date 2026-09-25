@@ -104,15 +104,14 @@ public class DashboardHotel extends JFrame {
         btnJenisKamar.addActionListener(e -> bukaModul("CRUD Jenis Kamar"));
         btnTamu.addActionListener(e -> bukaModul("CRUD Tamu"));
         btnWaiters.addActionListener(e -> bukaModul("CRUD Waiters"));
-        btnReservasi.addActionListener(e -> bukaModul("Transaksi Reservasi"));
+        btnReservasi.addActionListener(e -> bukaModul("CRUD Reservasi"));
 
         btnLogout.addActionListener(e -> {
             int confirm = JOptionPane.showConfirmDialog(
                     this,
                     "Apakah Anda yakin ingin keluar?",
                     "Konfirmasi Logout",
-                    JOptionPane.YES_NO_OPTION
-            );
+                    JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
                 new Login().setVisible(true);
                 this.dispose();
@@ -139,8 +138,7 @@ public class DashboardHotel extends JFrame {
         panelNavbar.setPreferredSize(new Dimension(0, 75));
         panelNavbar.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(226, 232, 240)),
-                new EmptyBorder(12, 30, 12, 30)
-        ));
+                new EmptyBorder(12, 30, 12, 30)));
 
         // Judul Aplikasi di Kiri Navbar
         JPanel panelTitle = new JPanel(new GridLayout(2, 1));
@@ -351,12 +349,15 @@ public class DashboardHotel extends JFrame {
                 if (updated > 0) {
                     this.fotoData = bytesBaru;
                     tampilkanFotoBulat();
-                    JOptionPane.showMessageDialog(this, "Foto profil berhasil diperbarui!", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Foto profil berhasil diperbarui!", "Sukses",
+                            JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    JOptionPane.showMessageDialog(this, "Gagal mengupdate foto profil di database.", "Peringatan", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Gagal mengupdate foto profil di database.", "Peringatan",
+                            JOptionPane.WARNING_MESSAGE);
                 }
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Gagal memproses gambar: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Gagal memproses gambar: " + ex.getMessage(), "Error",
+                        JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -380,6 +381,8 @@ public class DashboardHotel extends JFrame {
             new FormTamu().setVisible(true);
         } else if (namaModul.equals("CRUD Waiters")) {
             new FormWaiters().setVisible(true);
+        } else if (namaModul.equals("CRUD Reservasi") || namaModul.equals("Transaksi Reservasi")) {
+            new FormReservasi().setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this, "Membuka modul: " + namaModul);
         }
